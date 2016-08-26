@@ -1,0 +1,13 @@
+run_analysis{
+xtestdata <- read.table("X_test.txt")
+ytestdata <- read.table("Y_test.txt")
+subjecttest <- read.table("subject_test.txt")
+subydata <- cbind(subjecttest, ytestdata)
+mergetestdata <- cbind(subydata, xtestdata)
+xtraindata <- read.table("X_train.txt")
+ytraindata <- read.table("Y_train.txt")
+subjecttrain <- read.table("subject_train.txt")
+subytraindata <- cbind(subjecttrain, ytraindata)
+mergetraindata <- cbind(subytraindata, xtraindata)
+mergealldata <- rbind(mergetestdata, mergetraindata)
+}
